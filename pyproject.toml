@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cake-divider"
+version = "0.1.0"
+description = "Parametric CadQuery model for a 3D-printable cake divider."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["cadquery>=2.5,<3"]
+
+[project.scripts]
+cake-divider = "cake_divider.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cake_divider*"]
